@@ -28,28 +28,28 @@ void main() {
 
 // Approach 2: using Comparable abstract class
 
-// class Customer extends Comparable {
-//   int age;
-//   String name;
-//   Customer(this.name, this.age);
+class Customer extends Comparable {
+  int age;
+  String name;
+  Customer(this.name, this.age);
 
-//   @override
-//   String toString() {
-//     return '{${this.name},${this.age}}';
-//   }
+  @override
+  String toString() {
+    return '{${this.name},${this.age}}';
+  }
 
-//   @override
-//   int compareTo(onether) {
-//     return this.name.compareTo(onether.name);
-//   }
-// }
+  @override
+  int compareTo(onether) {
+    return this.name.compareTo(onether.name);
+  }
+}
 
-// void main() {
-//   List custom = [];
-//   custom.add(Customer('guna', 19));
-//   custom.add(Customer('palani', 90));
-//   custom.add(Customer('logesh', 26));
-//   custom.add(Customer('anbu', 31));
-//   custom.sort();
-//   print(custom);
-// }
+void main() {
+  List custom = [];
+  custom.add(Customer('guna', 19));
+  custom.add(Customer('palani', 90));
+  custom.add(Customer('logesh', 26));
+  custom.add(Customer('anbu', 31));
+  custom.sort();
+  print(custom);
+}
